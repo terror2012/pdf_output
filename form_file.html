@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title">Company Name</h1>
+                <hr />
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post" action="#">
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Company Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" required  placeholder="Enter Company Name"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="cols-sm-2 control-label">Address</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="address" id="address" required placeholder="Enter Address"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="zip" class="cols-sm-2 control-label">ZIP Code</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="zip" id="zip" required placeholder="Enter ZIP Code"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="city" class="cols-sm-2 control-label">City</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="city" id="city" required placeholder="Enter City"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="state" class="cols-sm-2 control-label">State</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="state" id="state" required  placeholder="Enter State"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vat" class="cols-sm-2 control-label">VAT Number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="vat" id="vat" required placeholder="Enter VAT Number"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="company" class="cols-sm-2 control-label">Company Number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="company" id="company" required placeholder="Enter Company Number"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="invoice" class="cols-sm-2 control-label">Invoice Number</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="invoice" id="invoice" required placeholder="Enter Invoice Number"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date" class="cols-sm-2 control-label">Date</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="date" class="form-control" name="date" id="date" required placeholder="Enter Date"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="currency" class="cols-sm-2 control-label">Currency</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <select id="currency" name="currency">
+                                <option value="eur">EUR</option>
+                                <option value="usd">USD</option>
+                                <option value="gbp">GBP</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="service" class="cols-sm-2 control-label">Service Description</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="text" id="service" name="service" required placeholder="Enter Service Description"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="amount" class="cols-sm-2 control-label">Net Amount</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="number" class="form-control" name="amount" id="amount" required placeholder="Enter Net Amount"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vat_code" class="cols-sm-2 control-label">VAT Code</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <select id="vat_code" name="vat_code">
+                                <option value="0">0%</option>
+                                <option value="4">4%</option>
+                                <option value="10">10%</option>
+                                <option value="15">15%</option>
+                                <option value="18">18%</option>
+                                <option value="22">22%</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vat_amount" class="cols-sm-2 control-label">VAT Amount</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="number" class="form-control" name="vat_amount" id="vat_amount" required placeholder="Enter VAT Amount"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                        <p>Add new amount</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="total" class="cols-sm-2 control-label">Total Amount</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <input type="number" class="form-control" name="total" id="total" required placeholder="Enter Total Amount"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="note" class="cols-sm-2 control-label">Note</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                            <select id="note" name="note">
+                                <option value="option 1">Option 1</option>
+                                <option value="option 2">Option 2</option>
+                                <option value="option 3">Option 3</option>
+                                <option value="option 4">Option 4</option>
+                                <option value="option 5">Option 5</option>
+                                <option value="option 6">Option 6</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
