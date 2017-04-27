@@ -5,3 +5,14 @@
  * Date: 4/26/2017
  * Time: 3:15 PM
  */
+
+require_once('core_code.php');
+
+$core = new core_code();
+
+$patern = '/netamount_.*/';
+$stuffArray =  $core->preg_grep_keys($patern, $_POST);
+$keyNumbers = $core->get_amount_number($stuffArray);
+
+$arraySet = $core->get_array_amount_value($keyNumbers);
+print_r($arraySet);
