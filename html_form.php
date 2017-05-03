@@ -6,8 +6,8 @@
  * Time: 3:15 PM
  */
 require_once('vendor/autoload.php');
-require_once('pjmail/pjmail.class.php');
 require_once('core_code.php');
+require_once('smtp_variables.php');
 
 $core = new core_code();
 
@@ -58,4 +58,27 @@ catch(HTML2PDF_exception $e) {
     exit;
 }
 
-echo $core->send_email($pdf);
+
+$mail = new PHPMailer();
+$mail->isSMTP();
+$mail->SMTPDebug = '0';
+$mail->SMTPSecure = $secure;
+$mail->Host = $host;
+$mail->Port = $port;
+$mail->SMTPAuth = $auth;
+$mail->Username = $user;
+$mail->Password = $password;
+$mail->setFrom('sender_email@yahoo.com', 'sender_name');
+$mail->addAddress('receiver_email@gmail.com', 'receiver_name');
+$mail->Subject = 'Subject';
+$mail->addStringAttachment($pdf, 'File_name.pdf');
+$mail->Body = 'Subject';
+
+if($mail->send())
+{
+    echo 'success';
+}
+else
+{
+    echo $mail->ErrorInfo;
+}

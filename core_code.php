@@ -9,28 +9,6 @@
 class core_code
 {
 
-    function __construct()
-    {
-
-    }
-    public function send_email($pdf)
-    {
-        $mail = new PHPMailer();
-        $mail->setFrom('email_of_sender@yahoo.com', 'sender name');
-        $mail->addAddress('destination_email@gmail.com', 'destionator_name');
-        $mail->Subject = 'Subject';
-        $mail->addStringAttachment($pdf, 'File_name.pdf');
-        $mail->Body = 'Subject';
-
-        if($mail->send())
-        {
-            return 'success';
-        }
-        else
-        {
-            return $mail->ErrorInfo;
-        }
-    }
     public function preg_grep_keys( $pattern, $input, $flags = 0 )
     {
         $keys = preg_grep( $pattern, array_keys( $input ), $flags );
