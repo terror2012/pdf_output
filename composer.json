@@ -1,5 +1,6 @@
 {
     "require": {
-        "spipu/html2pdf": "^4.6"
+        "spipu/html2pdf": "^4.6",
+        "phpmailer/phpmailer": "^5.2"
     }
 }
