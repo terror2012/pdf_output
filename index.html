@@ -7,31 +7,6 @@
         {
             cursor: hand;
         }
-        input {
-            position: relative;
-            width: 150px; height: 20px;
-            color: white;
-        }
-
-        input:before {
-            position: absolute;
-            top: 3px; left: 3px;
-            content: attr(data-date);
-            display: inline-block;
-            color: black;
-        }
-
-        input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
-            display: none;
-        }
-
-        input::-webkit-calendar-picker-indicator {
-            position: absolute;
-            top: 3px;
-            right: 0;
-            color: black;
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
@@ -94,7 +69,7 @@
         <div class="required field">
             <label>Date</label>
             <div class="field">
-                <input type="date" id="date" data-date="" data-date-format="DD MMM YYYY" name="date" placeholder="Enter Date" value="" required />
+                <input type="date" id="date" name="date" placeholder="Enter Date" required />
             </div>
         </div>
         <div class="required field">
@@ -150,16 +125,6 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/semantic/dist/semantic.min.js"></script>
 <script src="bower_components/parsleyjs/dist/parsley.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 <script src="add_new_fields.js"></script>
-<script>
-    $("input").on("change", function() {
-    this.setAttribute(
-            "data-date",
-            moment(this.value, "YYYY-MM-DD")
-                    .format( this.getAttribute("data-date-format") )
-    )
-}).trigger("change")
-</script>
 </body>
 </html>
